@@ -71,3 +71,20 @@ div.appendChild(paragraph);
 main.appendChild(div);
 body.appendChild(main);
 */
+// 4 завда
+// Отримуємо посилання на кнопку "Надіслати" та поле "out"
+const btn = document.querySelector('.btn');
+const outBlock = document.querySelector('.out');
+
+// Додаємо обробник події "click" до кнопки "Надіслати"
+btn.addEventListener('click', function() {
+  // Отримуємо значення всіх полів вводу
+  const inputs = document.querySelectorAll('.arr');
+  let output = '';
+  inputs.forEach(input => {
+    output += input.dataset.form + ': ' + input.value + '\n';
+  });
+
+  // Виводимо результат у поле з класом "out"
+  outBlock.textContent = output;
+});
