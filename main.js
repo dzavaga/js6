@@ -18,41 +18,30 @@
 }
 */
 // 2
-/*
-// Заголовок
-let header = document.querySelector('h1');
-header.style.fontSize = '72px';
-header.style.textAlign = 'center';
+const header = document.getElementsByTagName("h1")[0];
+header.style.fontWeight = "bold";
+header.style.backgroundColor = "green";
 
-// Контейнер з абзацами
-let div = document.querySelector('#myDiv');
-div.style.display = 'flex';
-div.style.flexDirection = 'column';
-div.style.alignItems = 'center';
 
-// Абзаци
-let paragraphs = document.querySelectorAll('#myDiv p');
-paragraphs.forEach(function(paragraph) {
-  paragraph.style.width = '50%';
-  paragraph.style.textAlign = 'justify';
-});
 
-// Список
-let list = document.querySelector('#myList');
-list.style.display = 'flex';
-list.style.flexDirection = 'row';
+const firstParagraph = document.getElementsByTagName("p")[0];
+firstParagraph.style.fontWeight = "bold";
 
-// Елементи списку
-let items = document.querySelectorAll('#myList li');
-items.forEach(function(item) {
-  item.style.flex = '1';
-  item.style.textAlign = 'center';
-});
+const secondParagraph = document.getElementsByTagName("p")[1];
+secondParagraph.style.color = "red";
+const thirdParagraph = document.getElementsByTagName("p")[2];
+thirdParagraph.style.textDecoration = "underline";
+const fourthParagraph = document.getElementsByTagName("p")[3];
+fourthParagraph.style.fontStyle = "italic";
 
-// Елемент span
-let span = document.querySelector('span');
-span.style.display = 'none';
-*/
+const myList = document.getElementById("myList");
+myList.style.display = "flex";
+const listItems = myList.getElementsByTagName("li");
+for (let i = 0; i < listItems.length; i++) {
+  listItems[i].style.display = "inline-block";
+}
+const gutText = document.getElementsByTagName("span")[0];
+gutText.style.display = "none";
 //3 завдання
 /*
 // Створення елементів
@@ -71,7 +60,7 @@ div.appendChild(paragraph);
 main.appendChild(div);
 body.appendChild(main);
 */
-// 4 завда
+/*// 4 завда 
 // Отримуємо посилання на кнопку "Надіслати" та поле "out"
 const btn = document.querySelector('.btn');
 const outBlock = document.querySelector('.out');
@@ -87,4 +76,4 @@ btn.addEventListener('click', function() {
 
   // Виводимо результат у поле з класом "out"
   outBlock.textContent = output;
-});
+});*/
