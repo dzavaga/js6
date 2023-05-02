@@ -18,7 +18,7 @@
 }
 */
 // 2
-const header = document.getElementsByTagName("h1")[0];
+/*const header = document.getElementsByTagName("h1")[0];
 header.style.fontWeight = "bold";
 header.style.backgroundColor = "green";
 
@@ -41,7 +41,7 @@ for (let i = 0; i < listItems.length; i++) {
   listItems[i].style.display = "inline-block";
 }
 const gutText = document.getElementsByTagName("span")[0];
-gutText.style.display = "none";
+gutText.style.display = "none";*/
 //3 завдання
 /*
 // Створення елементів
@@ -77,3 +77,15 @@ btn.addEventListener('click', function() {
   // Виводимо результат у поле з класом "out"
   outBlock.textContent = output;
 });*/
+//5 завдання
+const circles = document.querySelectorAll('.circle');
+circles.forEach(circle => {
+  const animClass = circle.dataset.anim;
+  circle.classList.add(animClass);
+});
+circles.forEach(circle => {
+  circle.addEventListener('animationend', () => {
+    console.log('Animation ended!');
+  });
+});
+//6 завдання
