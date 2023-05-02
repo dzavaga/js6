@@ -78,7 +78,7 @@ btn.addEventListener('click', function() {
   outBlock.textContent = output;
 });*/
 //5 завдання
-const circles = document.querySelectorAll('.circle');
+/*const circles = document.querySelectorAll('.circle');
 circles.forEach(circle => {
   const animClass = circle.dataset.anim;
   circle.classList.add(animClass);
@@ -87,5 +87,33 @@ circles.forEach(circle => {
   circle.addEventListener('animationend', () => {
     console.log('Animation ended!');
   });
-});
+});*/
 //6 завдання
+/*const colors = document.querySelectorAll(".color");
+const outprice = document.getElementById("outprice");
+
+// початкова ціна
+let price = 189.99;
+
+// оброблювач подій при кліку на колір
+colors.forEach(color => {
+  color.addEventListener("click", () => {
+    // змінюємо активний колір
+    colors.forEach(c => c.classList.remove("active"));
+    color.classList.add("active");
+
+    // отримуємо ціну коліру
+    const newPrice = color.getAttribute("data-price");
+
+    // оновлюємо ціну товару
+    outprice.textContent = newPrice;
+
+    // оновлюємо загальну ціну, якщо ціна коліру змінилася
+    if (newPrice !== price) {
+      price = newPrice;
+      console.log(`New price: ${price}`);
+      // робимо щось зі зміненою ціною, наприклад, зберігаємо в базу даних
+    }
+  });
+});
+*/
